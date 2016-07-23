@@ -1,0 +1,20 @@
+<apex:page controller="TwilioPageController">
+ 
+  <apex:form >
+    <apex:pageBlock title="Twilio API Sample">
+      <apex:pageBlockSection title="Outbound SMS" columns="1">
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel for="phoneNumber">Phone Number:</apex:outputLabel>
+          <apex:inputText id="phoneNumber" value="{!phoneNumber}"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel for="message">Message:</apex:outputLabel>
+          <apex:inputText id="message" value="{!message}"/>
+        </apex:pageBlockSectionItem>
+        <apex:commandButton value="Send SMS" action="{!sendSMS}"/>
+        <apex:outputText id="status" value="{!status}"/><br/>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+
+</apex:page>

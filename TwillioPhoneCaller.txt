@@ -1,0 +1,16 @@
+<apex:page controller="TwilioCallController">
+ 
+  <apex:form >
+    <apex:pageBlock title="Twilio API Sample">
+      <apex:pageBlockSection title="Outbound Phone Call" columns="1">
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel for="phoneNumber">Phone Number:</apex:outputLabel>
+          <apex:inputText id="phoneNumber" value="{!phoneNumber}"/>
+        </apex:pageBlockSectionItem>
+        <apex:commandButton value="Make Call" action="{!makeCall}"/>
+        <apex:outputText id="status" value="{!status}"/><br/>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+
+</apex:page>
